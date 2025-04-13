@@ -52,7 +52,7 @@ const Editor = ({ documentId }) => {
   useEffect(() => {
     if (!quill) return;
     const interval = setInterval(() => {
-      socket.emit("save-document", {
+      socket.emit("save-documents", {
         docId: documentId,
         data: quill.getContents(),
       });
