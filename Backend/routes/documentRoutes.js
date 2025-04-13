@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { createDocument, getDocument, saveDocument } = require("../controllers/documentController");
-const auth = require("../middleware/auth");  // Import auth middleware
+const auth = require("../middleware/authMiddleware");  // Import auth middleware
 
 // Route to create a document (protected)
 router.post("/", auth, createDocument);
